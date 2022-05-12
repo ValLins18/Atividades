@@ -1,56 +1,41 @@
 #include<stdio.h>
+   
+int maior(int n1, int n2) {
+    if(n1 > n2)
+        return n1;
+    else
+        return n2;
+}
+int menor(int n1, int n2) {
+    if(n1 < n2)
+        return n1;
+    else
+        return n2;
+}
+int meio(int n1, int n2) {
+    if(n1 > n2)
+        return n2;
+    else
+        return n1;
+}
 
 int main()
 {  
-    int a,b,c ,e1,e2,e3;
-
-    scanf("%d %d %d", &a,&b,&c);
-
-    if(a > b && a > c)
-    {
-      e1 = a;
-      if(b > c )
-      {
-       e2 = b;
-       e3 = c;
-      }
-      else
-      {
-       e2 = c;
-       e3 = b;
-      }
-    }
-    else if(b > a && b > c)
-    {
-        e1 = b;
-        if(a > c)
-        {
-          e2 = a;
-          e3 = c;
-        }
-        else
-        {
-            e2 = c;
-            e3 = a;
-        }
-    }
-    else
-    {
-      e1 = c;
-      if(a > b)
-      {
-          e2 = a;
-          e3 = b;
-      }
-      else
-      {
-         e2 = b;
-         e3 = a;
-      }
-    }
+    int i, a, b, c, maior, meio, menor;
     
-
+        printf("digite: ");
+        scanf("%d", &a);
+           
+        printf("digite: ");
+        scanf("%d", &b);
     
-    printf("%d \n %d \n %d", e1,e2,e3);
-    return 0;
+        printf("digite: ");
+        scanf("%d", &c);
+    
+        int mai = maior(maior(a, b), c);
+        int mei = meio(meio(a, b), c);
+        int men = menor(menor(a, b), c);
+    
+    printf("%d, %d, %d", men, mei, mai);
+    return 0
 }
